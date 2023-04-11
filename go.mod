@@ -59,3 +59,5 @@ replace github.com/sirupsen/logrus => github.com/projectcalico/logrus v1.0.4-cal
 replace github.com/dgrijalva/jwt-go => github.com/golang-jwt/jwt/v4 v4.4.2
 
 replace github.com/projectcalico/libcalico-go => ../libcalico-go
+
+replace golang.org/x/crypto => golang.org/x/crypto v0.0.0-20220314234659-1baeb1ce4c0b
