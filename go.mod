@@ -13,12 +13,13 @@ require (
 	github.com/projectcalico/libcalico-go v1.7.2-0.20211119233600-e3f7c620522a
 	github.com/prometheus/client_golang v1.11.1
 	github.com/sirupsen/logrus v1.6.0
-	k8s.io/api v0.18.12
-	k8s.io/apimachinery v0.18.12
-	k8s.io/client-go v0.18.12
+	k8s.io/api v0.19.6
+	k8s.io/apimachinery v0.19.6
+	k8s.io/client-go v0.19.6
 )
 
 require (
+	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/smartystreets/goconvey v0.0.0-20190710185942-9d28bd7c0945 // indirect
 	gopkg.in/go-playground/validator.v9 v9.28.0 // indirect
 	gopkg.in/ini.v1 v1.44.0 // indirect
@@ -26,7 +27,7 @@ require (
 
 replace (
 	github.com/Microsoft/hcsshim => github.com/projectcalico/hcsshim v0.8.9-calico
-	github.com/kelseyhightower/confd => ../confd
+	//github.com/kelseyhightower/confd => ../confd
 
 	k8s.io/api => k8s.io/api v0.18.12
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.18.12
@@ -58,12 +59,10 @@ replace github.com/sirupsen/logrus => github.com/projectcalico/logrus v1.0.4-cal
 
 replace github.com/dgrijalva/jwt-go => github.com/golang-jwt/jwt/v4 v4.4.2
 
-replace github.com/projectcalico/libcalico-go => ../libcalico-go
+//replace github.com/projectcalico/libcalico-go => ../libcalico-go
 
 replace golang.org/x/text => golang.org/x/text v0.3.8
 
 replace golang.org/x/net => golang.org/x/net v0.7.0
-
-replace github.com/satori/go.uuid => github.com/google/uuid v1.3.0
 
 replace golang.org/x/crypto => golang.org/x/crypto v0.0.0-20220314234659-1baeb1ce4c0b
