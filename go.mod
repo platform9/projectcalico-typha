@@ -19,7 +19,6 @@ require (
 )
 
 require (
-	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/smartystreets/goconvey v0.0.0-20190710185942-9d28bd7c0945 // indirect
 	gopkg.in/go-playground/validator.v9 v9.28.0 // indirect
 	gopkg.in/ini.v1 v1.44.0 // indirect
@@ -27,7 +26,7 @@ require (
 
 replace (
 	github.com/Microsoft/hcsshim => github.com/projectcalico/hcsshim v0.8.9-calico
-	//github.com/kelseyhightower/confd => ../confd
+	github.com/kelseyhightower/confd => ../confd
 
 	k8s.io/api => k8s.io/api v0.18.12
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.18.12
@@ -59,7 +58,7 @@ replace github.com/sirupsen/logrus => github.com/projectcalico/logrus v1.0.4-cal
 
 replace github.com/dgrijalva/jwt-go => github.com/golang-jwt/jwt/v4 v4.4.2
 
-//replace github.com/projectcalico/libcalico-go => ../libcalico-go
+replace github.com/projectcalico/libcalico-go => ../libcalico-go
 
 replace golang.org/x/text => golang.org/x/text v0.3.8
 

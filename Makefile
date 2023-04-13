@@ -93,7 +93,7 @@ bin/calico-typha: bin/calico-typha-$(ARCH)
 
 bin/calico-typha-$(ARCH): $(SRC_FILES) $(LOCAL_BUILD_DEP)
 	mkdir -p bin
-	$(DOCKER_RUN) $(CALICO_BUILD) \
+	$(DOCKER_RUN) -v $(CURDIR)/../libcalico-go:/go/src/github.com/projectcalico/libcalico-go:rw -v $(CURDIR)/../confd:/go/src/github.com/projectcalico/confd:rw $(CALICO_BUILD) \
 	    sh -c 'go build -v -i -o $@ -v $(LDFLAGS) "$(PACKAGE_NAME)/cmd/calico-typha" && \
 		( ldd $@ 2>&1 | grep -q -e "Not a valid dynamic program" \
 		-e "not a dynamic executable" || \
